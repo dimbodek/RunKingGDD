@@ -21,7 +21,7 @@ it's a hyper-casual mobile game based on runner mechanic where user must control
 ## Narrative
 Game events happened in mediaeval-fantasy kigdom which are captured by skeletons, they destroyed most buildings and take in jail all knights defenders. We can see on locations that they are captured, buildings destroyed, fields are in fiere and a lot of skeletons around on background. There are several bosse's which controlls skelletons, player may sometimes meet them on a road, he can't kill them or attack, he only can avoid their attacks. Player will be fight with regular skeletons when collide and free up caused knights to extend his army, also player may loose knights when fight with skeletons or collide with obstacls or bosse's attacks. During the run player can collect gold for different activity and then spend them in the store. As game is infinity player can achive score for run and make records.
 
-<img src="./images/captured_village.png" width="250" height="250" alt='captured village'>
+<img src="./images/captured_village.png" align="left" width="250" height="250" alt='captured village'>
 <img src="./images/captured_village_v2.png" width="250" height="250" alt='captured village'>
 
 ***
