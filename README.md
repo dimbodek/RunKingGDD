@@ -27,6 +27,37 @@ Game events happened in mediaeval-fantasy kigdom which are captured by skeletons
 ***
 
 ## Gameplay
-<img src="./images/screen_from_game.jpg" width="250" height="550" alt='screen from mvp' style="float: left; margin-right: 10px; margin-top: 10px;"> Game(run) starts from single knight under player controll. Player can add new knights in his group when collide with them. Knights group always move forward, player only have option move group between corners. When knight collide with obstacl or skeleton he die, if no knights is left under player controll - game over. Also player can meet different bosses during run which are apearens on some time and trying to attaks player's knights, player must avoid attacks to save knights. Player should collect coins by collide with them. Knights can be spended on fight with skeletons to free up new knights and collect more gold.
+Game(run) starts from single knight under player controll which move forward on straight road. On road player can meet next types of entities: skeletons squads, coins, obstacls and boosts. With each of entity player can collide or not. 
+* When collide with skeletons sqaud player loose his knights in quantity equal skeletons, so if knights under player controll less then count of skeletons - game over, in another way player recive gold from skeletons squad and captured knights if they exist. 
+* When collide with coin player just collect it.
+* When collide with obstacl player loose knight wich collide.
+* When collide with boost, player apply it
 
-<hr style="float:left; width: 100%"></hr>
+Player can only move knights under his controll from one side of road to another.
+Game speed is increase during time.
+
+***
+
+## Entities
+
+### Knight 
+<img src="./images/grid_0.webp" width="250" height="250" alt='captured village' align='left'>
+
+Knight is protogonist entity type. For game gonne always must be least one knight under player controll. Player can collect them and loose when collider with enemys entitys.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+### Skeleton
+<img src="./images/dimbodek_small_cartoon_and_clumsy_skeleton_with_big_head_and_sm_ffbb4fa2-2a07-43a7-a9a2-f04ada0baea1.png" width="250" height="250" alt='captured village' align='left'>
+
+Skeleton is a type of enemy entity. He kills the knight upon confronting him and dies from the knight's attack. The player can meet him and fight him or run around him.
