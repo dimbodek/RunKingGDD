@@ -1,4 +1,4 @@
-# **Game Design Document (GDD) – [Your Game Name]**
+# **Game Design Document (GDD) – [RNK]**
 
 ## **Table of Contents**
 1. [Game Overview](#game-overview)
@@ -88,7 +88,8 @@ Boosters replace some coin spawns and provide temporary benefits:
 ---
 
 ## **Store & Progression**
-![Store Screenshot Placeholder](path/to/store-screenshot.png)
+<img src="./images/store-characters-screenshot.png" alt="Store Characters Screenshot Placeholder" width="280"/>
+<img src="./images/store-powers-screenshot.png" alt="Store Powers Screenshot Placeholder" width="280"/>
 
 - **How Players Earn Coins:**
   - **During runs** – Collecting coins along the road.
