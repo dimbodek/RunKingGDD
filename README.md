@@ -65,7 +65,7 @@ The game world is procedurally generated with **randomly spawned locations**.
 ---
 
 ## **Boosters**
-![Boosters Screenshot Placeholder](path/to/boosters-screenshot.png)
+<img src="./images/booster_screenshot.png" alt="Boosters Screenshot Placeholder" width="280"/>
 
 Boosters replace some coin spawns and provide temporary benefits:
 1. **Jumper** – Makes the group **jump over obstacles**, skipping a short section of the level.
