@@ -25,7 +25,7 @@
 ---
 
 ## **Core Gameplay**
-![Gameplay Screenshot Placeholder](path/to/gameplay-screenshot.png)
+![Gameplay Screenshot Placeholder](./images/nimble_trap.png)
 
 - **Controls:**
   - **Swipe left/right** – Moves the entire squad left or right (smooth X-axis movement).
