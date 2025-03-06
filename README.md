@@ -25,7 +25,7 @@
 ---
 
 ## **Core Gameplay**
-<img src="./images/nimble_trap.png" alt="Gameplay Screenshot Placeholder" width="400"/>
+<img src="./images/nimble_trap.png" alt="Gameplay Screenshot Placeholder" width="280"/>
 
 - **Controls:**
   - **Swipe left/right** – Moves the entire squad left or right (smooth X-axis movement).
@@ -53,7 +53,7 @@ The game world is procedurally generated with **randomly spawned locations**.
 ---
 
 ## **Goblin Behavior**
-![Goblin Camp Screenshot Placeholder](./images/world_structure.png)
+<img src="./images/goblins_camp.png" alt="Goblin Camp Screenshot Placeholder" width="800"/>
 
 - Goblins **only appear in camps**, which also contain cages and props that can be destroyed for visual effects.  
 - If the **player has more than one unit**, the **front unit automatically attacks goblins** and both are removed from play (unit dies, goblin dies).  
