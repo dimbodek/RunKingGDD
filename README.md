@@ -88,8 +88,10 @@ Boosters replace some coin spawns and provide temporary benefits:
 ---
 
 ## **Store & Progression**
-<img src="./images/store-characters-screenshot.PNG" alt="Store Characters Screenshot Placeholder" width="280"/>
-<img src="./images/store-powers-screenshot.PNG" alt="Store Powers Screenshot Placeholder" width="280"/>
+<div style="display: flex; gap: 10px;">
+  <img src="./images/store-characters-screenshot.PNG" alt="Store Characters Screenshot Placeholder" width="280"/>
+  <img src="./images/store-powers-screenshot.PNG" alt="Store Powers Screenshot Placeholder" width="280"/>
+</div>
 
 - **How Players Earn Coins:**
   - **During runs** – Collecting coins along the road.
