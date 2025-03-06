@@ -1,63 +1,117 @@
-# Game design document for [RunKing](https://github.com/dimbodek/RunKing "RunKing game repo") game
+# **Game Design Document (GDD) – [Your Game Name]**
 
-## Table of contents
-* [Table of contents](#table_of_contents)
-* [Introduction](#introduction)
-* [Narrative](#narrative)
-* [Gameplay](#gameplay)
-* Characters (in process...)
-* Interface (in process...)
-* Features  (in process...)
-* Analytics (in process...)
+## **Table of Contents**
+1. [Game Overview](#game-overview)
+2. [Core Gameplay](#core-gameplay)
+3. [Game World & Level Structure](#game-world--level-structure)
+4. [Goblin Behavior](#goblin-behavior)
+5. [Boosters](#boosters)
+6. [User Interface & Navigation](#user-interface--navigation)
+7. [Store & Progression](#store--progression)
+8. [Level Generation & Difficulty Scaling](#level-generation--difficulty-scaling)
 
+---
 
-## Introduction
-<sub>May be bryfly described as gybrid of [Subway Surfers](https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=ru&gl=US) and [Join Clash 3D](https://play.google.com/store/apps/details?id=com.freeplay.runandfight&hl=en_US&gl=US) by mechanics</sub>
+## **Game Overview**
+- **Genre:** Endless Runner with Squad Mechanics  
+- **Platform:** Mobile (iOS, Android)  
+- **Art Style:** 3D, colorful, medieval-fantasy theme  
+- **Game Loop:**
+  1. Navigate the **3D menu world** to access different sections (Store, Bank, etc.).
+  2. Press **Play** → the camera rotates behind the player, and the run begins.
+  3. **Dodge traps, collect coins, fight goblins, and grow your squad** while progressing.
+  4. **Rescue units** to maintain squad size.
 
-it's a hyper-casual mobile game based on runner mechanic where user must controll group of character which infinity move forward and move it from on corner to another one to avoid obstacls or collect smth. This game mostly targen on children from 6+ y.o. Game must be maked in casual design style in mediaeval-fantasy setting.
+---
 
-***
+## **Core Gameplay**
+![Gameplay Screenshot Placeholder](path/to/gameplay-screenshot.png)
 
-## Narrative
-Game events happened in mediaeval-fantasy kigdom which are captured by skeletons, they destroyed most buildings and take in jail all knights defenders. We can see on locations that they are captured, buildings destroyed, fields are in fiere and a lot of skeletons around on background. There are several bosse's which controlls skelletons, player may sometimes meet them on a road, he can't kill them or attack, he only can avoid their attacks. Player will be fight with regular skeletons when collide and free up caused knights to extend his army, also player may loose knights when fight with skeletons or collide with obstacls or bosse's attacks. During the run player can collect gold for different activity and then spend them in the store. As game is infinity player can achive score for run and make records.
+- **Controls:**
+  - **Swipe left/right** – Moves the entire squad left or right (smooth X-axis movement).
+  - The player **cannot jump or slide** (since the squad consists of multiple units).
+- **Main Objectives:**
+  - Avoid **traps** to prevent unit loss.
+  - **Collect coins** and **boosters** for advantages.
+  - Enter **goblin camps** to fight, rescue units, and progress further.
+  - If the player has **no units left and collides with a goblin, they die**.
 
-<img src="./images/captured_village.png" align="left" width="250" height="250" alt='captured village'>
-<img src="./images/captured_village_v2.png" width="250" height="250" alt='captured village'>
+---
 
-***
+## **Game World & Level Structure**
+![World Structure Screenshot Placeholder](path/to/world-structure-screenshot.png)
 
-## Gameplay
-Game(run) starts from single knight under player controll which move forward on straight road. On road player can meet next types of entities: skeletons squads, coins, obstacls and boosts. With each of entity player can collide or not. 
-* When collide with skeletons sqaud player loose his knights in quantity equal skeletons, so if knights under player controll less then count of skeletons - game over, in another way player recive gold from skeletons squad and captured knights if they exist. 
-* When collide with coin player just collect it.
-* When collide with obstacl player loose knight wich collide.
-* When collide with boost, player apply it
+The game world is procedurally generated with **randomly spawned locations**.
+- **Long Locations**
+  - Focus on **avoiding traps and collecting coins**.
+  - Losing units in traps reduces the player's squad.
+- **Short Locations (Goblin Camps)**
+  - Players must **fight goblins using their units**.
+  - **Free new units from cages** to restore squad size.
+  - If the player **has no units left**, they will **die if they hit a goblin**.
 
-Player can only move knights under his controll from one side of road to another.
-Game speed is increase during time.
+---
 
-***
+## **Goblin Behavior**
+![Goblin Camp Screenshot Placeholder](path/to/goblin-camp-screenshot.png)
 
-## Entities
+- Goblins **only appear in camps**, which also contain cages and props that can be destroyed for visual effects.  
+- If the **player has more than one unit**, the **front unit automatically attacks goblins** and both are removed from play (unit dies, goblin dies).  
+- If the **player has only one unit left**, it **won't attack**. The player must either:  
+  - **Rescue new units from cages** before reaching the goblins.  
+  - **Avoid goblins completely** (if possible).  
+- If the **player collides with a goblin while alone**, they **lose the game**.
 
-### Knight 
-<img src="./images/grid_0.webp" width="250" height="250" alt='captured village' align='left'>
+---
 
-Knight is protogonist entity type. For game gonne always must be least one knight under player controll. Player can collect them and loose when collider with enemys entitys.
+## **Boosters**
+![Boosters Screenshot Placeholder](path/to/boosters-screenshot.png)
 
-&nbsp;
+Boosters replace some coin spawns and provide temporary benefits:
+1. **Jumper** – Makes the group **jump over obstacles**, skipping a short section of the level.
+2. **Score Booster** – **Increases score multiplier** and **boosts speed**.
+3. **Magnet** – **Attracts nearby coins** to the player's units.
 
-&nbsp;
+---
 
-&nbsp;
+## **User Interface & Navigation**
+![Menu Screenshot Placeholder](./images/menu-screenshot.PNG)
 
-&nbsp;
+- **3D Menu System** (No traditional UI screens)
+  - All menu sections exist in **3D space** inside a **friendly camp**.
+  - The **camera smoothly rotates** to different sections instead of using loading screens.
+  - Example: Selecting the **store** moves the camera to a **golden treasure chest** in the camp.
+- **Seamless Transition into Gameplay**
+  - Pressing **Play** rotates the camera behind the player.
+  - The **player starts running from the menu position**, smoothly transitioning into gameplay.
 
-&nbsp;
+---
 
-&nbsp;
+## **Store & Progression**
+![Store Screenshot Placeholder](path/to/store-screenshot.png)
 
-### Skeleton
-<img src="./images/dimbodek_small_cartoon_and_clumsy_skeleton_with_big_head_and_sm_ffbb4fa2-2a07-43a7-a9a2-f04ada0baea1.png" width="250" height="250" alt='captured village' align='left'>
+- **How Players Earn Coins:**
+  - **During runs** – Collecting coins along the road.
+  - **Daily Bonus in the Menu** – Free coins given daily.
+- **What Coins Are Used For:**
+  - **Upgrading Boosters** – Making them last longer or work better.
+  - **Buying New Skins** – Customizing character appearance.
+  - **Unlocking New Playable Characters** – Getting unique heroes.
 
-Skeleton is a type of enemy entity. He kills the knight upon confronting him and dies from the knight's attack. The player can meet him and fight him or run around him.
+---
+
+## **Level Generation & Difficulty Scaling**
+![Level Generation Screenshot Placeholder](path/to/level-generation-screenshot.png)
+
+- **Random Level Part Sequence**  
+  - Levels **spawn in a random order**, but ensure that **all unique level parts appear at least once per cycle** before repeating.  
+- **Trap Activation Control**  
+  - If a trap was **disabled in the last sequence**, the system **tries to enable a different trap** in the next one.  
+  - This prevents repetitive patterns and keeps gameplay fresh.  
+- **Difficulty Scaling Over Time**  
+  - **Speed Increases** – The player moves faster the longer they survive.  
+  - **Trap Speed Increases** – Traps animate and reset more quickly.  
+  - **More Reaction-Based Gameplay** – Faster speeds make dodging and squad management harder.  
+
+---
+
